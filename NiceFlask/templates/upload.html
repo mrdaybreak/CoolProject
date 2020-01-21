@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工作使我快乐</title>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+</head>
+<body>
+    <form action="" enctype="multipart/form-data" method="post">
+        <input type="file" name="file" style="margin-left: 25%;width: 350px">
+        <input type="submit" value="上传" style="border-style: solid;border-width: 1px;background-color: black;">
+    </form>
+    <br/>
+    <div class="top">
+        <ul>
+        <li><a href="/IM">文本交流</a></li>
+        <li><a href="/upload">文件上传</a></li>
+        <li class="movea" style="width: 135px;"></li>
+        </ul>
+    </div>
+</body>
+<style>
+    body{
+        background-image: url("../static/IMbg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        {#background-attachment: fixed;#}
+    }
+    .top{
+        /* 设置宽度高度背景颜色 */
+        height: auto; /*高度改为自动高度*/
+        width: 100%;
+        position: fixed; /*固定在顶部*/
+        top: 0;/*离顶部的距离为0*/
+        }
+    .top ul{
+        /* 清除ul标签的默认样式 */
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        float: right;
+        position: relative;/*子元素absol*/
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+    .top li {
+        width: 200px;
+        height: 30px;
+        text-align: center;
+        float: left;
+    }
+
+    .top li a{
+       /* 设置链接内容显示的格式*/
+        color:#E5E5E5;
+        font-family: "Arial Black", arial-black, serif;
+        font-size: 30px;
+        text-align: center;
+        padding: 30px;
+        overflow: hidden;
+        text-decoration: none; /* 去除下划线 */
+
+    }
+    .movea{
+            height: 2px;
+            border-top: 4px solid #E5E5E5;
+            position: absolute;
+            left: 52.5%;
+            top: 180%;
+            transition: left .2s ease-in-out 0s;
+            -webkit-transition: left .2s ease-in-out 0s;
+            -moz-transition: left .2s ease-in-out 0s;/*firefox*/
+            -o-transition: left .2s ease-in-out 0s;/*opera*/
+    }
+    li:nth-child(1):hover~ .movea{
+        left: 38.5%;
+    }
+    li:nth-child(2):hover~ .movea{
+        left: 52.5%;
+    }
+    input{
+        margin-top: 21%;
+        color: #E5E5E5;
+    }
+</style>
+</html>

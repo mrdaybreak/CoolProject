@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一起过checklist嘛</title>
+
+</head>
+<br>
+<body>
+    <form action="" method="POST">
+        <h2>请挑选光荣入伍的童鞋</h2>
+        <label class="checkbox-line"><input type="checkbox" name="hobby" value="xxx">xxx</label>
+        <label class="checkbox-line"><input type="checkbox" name="hobby" value="xxx">xxx</label>
+
+        <br><br>
+        <label class="checkbox-line"><input type="checkbox" name="hobby" value="xxx">xxx</label>
+        <label class="checkbox-line"><input type="checkbox" name="hobby" value="xxx">xxx</label>
+
+        <h2>请挑选需要过的Tab</h2>
+        <label class="checkbox-aline"><input type="checkbox" name="hobbytab" value="xxx">xxx</label>
+        <label class="checkbox-aline"><input type="checkbox" name="hobbytab" value="xxx">xxx</label>
+        <br>
+
+        <h2>请挑多还是少</h2>
+        <label class="checkbox-aline"><input type="radio" name="hobbytoo" value="P0">P0</label>
+        <label class="checkbox-aline"><input type="radio" name="hobbytoo" value="C0">C0</label>
+        <br><br>
+        <input type="submit" value="一键生成" style="width:150px;height:50px">
+        <br><br>
+        <p class="jinjaresult">{{ result|safe }}</p>
+        <p class="jinjaresulttotal">{{ resulttotal|safe }}</p>
+    </form>
+</body>
+<style>
+    html,
+    body{
+        background-image: url("../static/cheback.png");
+        background-size: cover;
+    }
+    form{
+        width: 600px;
+        height: 700px;
+    }
+    .checkbox-line{
+        color: white;
+    }
+    .checkbox-aline{
+        color: white;
+    }
+    h2{
+        color: #FFD700;
+    }
+    .jinjaresult{
+        color: white;
+    }
+    .jinjaresulttotal{
+        width: 850px;
+        text-align: center;
+        color: white;
+        padding: 10px;
+    }
+
+</style>
+</html>
