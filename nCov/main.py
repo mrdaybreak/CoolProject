@@ -1,9 +1,9 @@
-from nCov.case import DayAdd
-from nCov.log.savelog import logs
+from case import DayAdd
+from log.savelog import logs
 import json
-from nCov.SendEmail import sendwe
+from SendEmail import sendwe
 
-with open('/Users/lingchen/PycharmProjects/like/nCov/url/baidu.json') as wj:
+with open('nCov/url/baidu.json') as wj:
     text = json.loads(wj.read())
     url = text['url']
     area = text['area']
