@@ -9,7 +9,7 @@ c = conn.cursor()
 try:
     c.execute("create table nCovchina"
               "(confirmed int default 0, unconfirmed int default 0, "
-              "otime timestamp default (datetime('now')))")
+              "otime timestamp default (date('now')))")
 except:
     pass
 
