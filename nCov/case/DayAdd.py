@@ -11,17 +11,16 @@ class GetImsg():
 
     def China(self):
         result_js_load =eval(self.result_js)['component'][0]['summaryDataIn']
-        print(result_js_load)
+        # print(result_js_load)
         confirmed = result_js_load['confirmed']
         died = result_js_load['died']
         cured = result_js_load['cured']
         unconfirmed = result_js_load['unconfirmed']
-        chinaresult = '<h1 style=color:red>全国累计确认-> %s, 累计死亡-> %s, 累计治愈-> %s, 现有疑似-> %s</h1>' % (confirmed, died, cured, unconfirmed)
-        return chinaresult
+        return confirmed, died, cured, unconfirmed
 
     def Area(self, area, city):
         result_js_load = eval(self.result_js)['component'][0]["caseList"]
-        print(result_js_load)
+        # print(result_js_load)
         acount = 0
         bcount = 0
         for i in range(len(result_js_load)):
