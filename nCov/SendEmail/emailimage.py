@@ -12,7 +12,5 @@ def line(x, y):
     plt.savefig("ache.png")
     return "ache.png"
 
-x = [('2020-02-23 05:26:52'), ('2020-02-24 05:26:52')]
-y = [(77041,), (77041,)]
-line(x, y)
+
 
