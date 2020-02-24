@@ -13,7 +13,7 @@ try:
 except:
     pass
 
-with open('nCov/url/baidu.json') as wj:
+with open('./url/baidu.json') as wj:
     text = json.loads(wj.read())
     url = text['url']
     area = text['area']
