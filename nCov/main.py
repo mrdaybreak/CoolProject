@@ -23,7 +23,7 @@ A = DayAdd.GetImsg(url)
 a = '<h1 style=color:red>全国累计确认-> %s, 累计死亡-> %s, 累计治愈-> %s, 现有疑似-> %s</h1>' % (A.China()[0], A.China()[1], A.China()[2], A.China()[3])
 b = A.Area(area, citya)
 ca = A.Area(area, cityb)
-c.execute("insert into nCovchina (confirmed, unconfirmed) values (%d, %d)" % (round(float(A.China()[0])), round(float(A.China()[3]))))
+c.execute("insert into nCovchina (confirmed, unconfirmed) values ({}, {})".format(int(A.China()[0]), int(A.China()[3])))
 conn.commit()
 y = list(c.execute("select confirmed from nCovchina"))
 x = [i[0] for i in list(c.execute("select otime from nCovchina"))]
